@@ -12,4 +12,43 @@ h1 {
   color: #333;
 }
 
+#timer {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+#buttons {
+  margin-bottom: 20px;
+}
+
+#taskInput {
+  width: 250px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#taskList {
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+#reset {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+#reset:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
 
