@@ -81,3 +81,56 @@ function startTimer() {
     }
   }, 1000); // Update every second
 }
+
+// Stop the timer function
+function stopTimer() {
+    clearInterval(timerInterval);
+  
+    // Enable start button, reset button, and task input
+    startButton.disabled = false;
+    resetButton.disabled = false;
+    taskInput.disabled = false;
+}
+  
+// Reset the timer function
+function resetTimer() {
+    clearInterval(timerInterval);
+    currentTime = 0;
+    minutesElement.textContent = '25';
+    secondsElement.textContent = '00';
+  
+    // Enable start button, task input, and disable reset button
+    startButton.disabled = false;
+    taskInput.disabled = false;
+    resetButton.disabled = true;
+}
+  
+// Function to add a task
+function addTask() {
+const taskText = taskInput.value.trim();
+  
+    if (taskText !== '') {
+      const taskItem = document.createElement('li');
+      const taskCheckbox = document.createElement('input');
+      taskCheckbox.type = 'checkbox';
+  
+      const taskLabel = document.createElement('label');
+      taskLabel.textContent = taskText;
+  
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Delete';
+      deleteButton.classList.add('delete-button');
+  
+      // Delete button click event
+      deleteButton.addEventListener('click', function() {
+        taskList.removeChild(taskItem);
+      });
+  
+      taskItem.appendChild(taskCheckbox);
+      taskItem.appendChild(taskLabel);
+      taskItem.appendChild(deleteButton);
+      taskList.appendChild(taskItem);
+  
+      taskInput.value = '';
+    }
+}
