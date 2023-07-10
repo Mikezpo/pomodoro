@@ -25,3 +25,11 @@ To build this project we'll be using the following technologies:
 
 ## Contact Me
 If you'd like to get in touch, please don't hesitate to reach out. I'd love to hear from you!
+
+
+## Contributing
+Contributions to this project are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the project's GitHub repository.
+
+
+## Conclusion
+Thank you for visiting my project. I hope you find my work as exciting and thought-provoking as I do.
